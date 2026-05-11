@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "azure-mcp"
+version = "0.1.0"
+description = "An MCP server that exposes Azure resources to AI assistants (read-only)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Your Name" }]
+dependencies = [
+    "mcp>=1.0.0",
+    "azure-identity>=1.17.0",
+    "azure-mgmt-resource>=23.1.0",
+    "azure-mgmt-web>=7.3.0",
+    "azure-mgmt-servicebus>=8.2.0",
+    "azure-monitor-query>=1.4.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+azure-mcp = "azure_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

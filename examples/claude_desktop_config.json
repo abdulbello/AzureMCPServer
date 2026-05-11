@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "azure": {
+      "command": "/ABSOLUTE/PATH/TO/azure-mcp-server/.venv/bin/python",
+      "args": ["-m", "azure_mcp.server"],
+      "env": {
+        "AZURE_SUBSCRIPTION_ID": "00000000-0000-0000-0000-000000000000",
+        "AZURE_LOG_ANALYTICS_WORKSPACE_ID": "00000000-0000-0000-0000-000000000000"
+      }
+    }
+  }
+}
